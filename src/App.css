@@ -1,17 +1,16 @@
 .header {
-  background-color: aqua;
+  background-color: #007ced;
   font-size: 32px;
   display: flex;
   justify-content: center;
   padding: 15px;
-  margin-bottom: 10px;
+  color: rgb(236, 236, 236);
 }
 .footer {
-  background-color: aqua;
+  background-color: #cce7ff;
   font-size: 16px;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   padding: 10px;
 }
 .bodyStyle {
@@ -33,10 +32,13 @@
 }
 .temperatureStyle p {
   font-size: 50px;
-  margin: 20px;
+  margin: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.temperatureStyle img{
+  height: 120px;
 }
 .listStyle {
   font-size: 22px;
@@ -46,4 +48,34 @@
 }
 .listStyle li {
   margin: 12px;
+}
+
+html, body, .container{
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.container{
+  background-color: #007ced;
+	background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+}
+#cloud-intro{
+  position: relative;
+  height: 100%;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+	animation: wind 80s linear infinite;
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
 }
