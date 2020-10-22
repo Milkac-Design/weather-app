@@ -32,8 +32,8 @@ function App() {
     <div>
       <header className="header">Mario's Weather App</header>
       <div className='container'>
-        <div className="bodyStyle">
-          <div id="cloud-intro">
+        <div id="cloud-intro">
+          <div className="bodyStyle">
             <form onSubmit={handleSubmit}>
               <div>
                 <div>
@@ -85,9 +85,9 @@ function App() {
                 <li>Pressure: {mainData.pressure} hPa</li>
               </ul>
             </div>
-            <p>
+            <p className='bottomMargin'>
               Last updated: {date}
-              <br />
+
             </p>
           </div>
         </div>
